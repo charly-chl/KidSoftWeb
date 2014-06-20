@@ -7,22 +7,18 @@ namespace KidSoftWeb.Models
 {
     public class Circulo
     {
-        string color;
-        string tamaño;
+        ColorCirculo color;
+        string width;
+        string height;
 
-       public string Color
-        {
-            get { return color; }
-            set { color = value; }
-        }
 
         public string toString()
         {
-            return "<div style=\"background-color:\">Pelota</div>";
+            return String.Format("<div style=\"background-color:{0}; width:{1}; height:{2};'\">Pelota</div>", this.color.ToString(),this.width,this.height);
         }
 
     }
 
-    enum tipoColor : int { Rojo, Azul, Verde, Amarillo };
+    enum ColorCirculo : int { red, blue, green, yellow };
 
-}
+}   
